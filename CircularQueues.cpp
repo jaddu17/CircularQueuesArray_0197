@@ -74,8 +74,22 @@ public:
     {
         // Cek apakah antrian kosong
         if (FRONT == -1)
+        {
             cout << "Queue is empty\n";
-        return;
+            return;
+        }
+        cout << "\nElements in the queue are...\n";
+
+        // Jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+        if (FRONT <= REAR)
+        {
+            while (FRONT <= REAR)
+            {
+                cout << queue_array[FRONT] << " ";
+                FRONT++;
+            }
+            cout << endl;
+        }
     }
 };
 
